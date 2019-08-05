@@ -9,31 +9,28 @@ Este projeto define isso por controlador mestre e controlador escravo. Precisa d
 * ### [MasterController](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/masterController.py)
 
   Define o controlador mestre.  
-  Parâmetros:  
-    Não há  
   
-  Métodos:  
-    Não há  
-
+  <ControllerName>(MasterController):
+	def __init__(self, ...variables):
+		MasterController.__init__(self)
+  
 * ### [SlaveController](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/slaveController.py)
 
   Define o controlador escravo.  
-  Parâmetros:  
-    Não há  
-    
-   Métodos:  
-   * assignPins  
-      Parâmetros:   
-      * pins (list)  
-      Retorno:   
-        Não há    
-      
-   * setPin  
-      Parâmetros:   
-      * pin (int)  
-      * voltage ('HIGH' ou 'LOW')  
-      Retorno:
-        Não há  
-      
-* ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/slaveController.py)
+  
+  <ControllerName>(SlaveController):
+	def __init__(self, ...variables):
+		SlaveController.__init__(self)
+	
+	Métodos:    
+	* assignPins(pins (list)) retorno (null)    
+   	* setPin(pin (int), voltage ('HIGH' ou 'LOW')) retorno (null)
+	  
+* ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
 
+	Define a máquina de estados
+
+	<StateMachineName> = StateMachine(states (dict), variables (dict), initState(string), opts = { debug (bool), timer (int) })
+
+	Métodos:  
+	* start() retorno (null)
