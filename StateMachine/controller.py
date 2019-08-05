@@ -2,13 +2,12 @@ from time import sleep
 from Core.masterController import MasterController
 
 class StateMachine(MasterController):
-    def __init__(self, states, variables, initState, *args):
+    def __init__(self, states, initState, *args):
         MasterController.__init__(self)
         self.stateIndex = initState # string
         self.states = states        # dict
         self.variables = variables  # dict
         self.actualState = initState 
-        self.initVariables = variables.copy()
         self.initState = initState
         self.nextState = initState
         self.debug = True
@@ -23,7 +22,6 @@ class StateMachine(MasterController):
             print('Starting state machine...\r')
         
         while True:
-            self.resetVariablesIfInitState()
             self.getActualState()
             if self.debug:
                 print('Actual state: {0}\r'.format(self.actualState.name))
@@ -36,10 +34,6 @@ class StateMachine(MasterController):
 
             self.changeState()
             sleep(self.timer)
-
-    def resetVariablesIfInitState(self):
-        if self.stateIndex == self.initState:
-            self.variables = self.initVariables.copy() 
 
     def getActualState(self):
         self.actualState = self.states[self.stateIndex]
@@ -58,6 +52,8 @@ class StateMachine(MasterController):
                 return
             
     def changeState(self):
+        if not self.nextState in self.states:
+            raise Exception('State {} does not exist.'.format(nextState))
         self.stateIndex = self.nextState
 
 class State:
