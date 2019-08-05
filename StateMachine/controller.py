@@ -1,9 +1,9 @@
 from time import sleep
-from threading import Thread
+from Core.masterController import MasterController
 
-class StateMachine(Thread):
+class StateMachine(MasterController):
     def __init__(self, states, variables, initState):
-        Thread.__init__(self)
+        MasterController.__init__(self)
         self.stateIndex = initState # string
         self.states = states        # dict
         self.variables = variables  # dict
