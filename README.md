@@ -23,9 +23,12 @@ def __init__(self, ...variables):
 	def __init__(self, ...variables):  
 		SlaveController.__init__(self)
 ```
-####	Métodos:    
-	* assignPins(pins (list)) retorno (null)    
-   	* setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (null)
+
+####	Métodos:   
+```python 
+	assignPins(pins (list)) retorno (None)    
+   	setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (None)
+```
 
 * ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
 
@@ -34,5 +37,7 @@ def __init__(self, ...variables):
 <StateMachineName> = StateMachine(states (dict), variables (dict), initState(string), opts = { debug (bool), timer (int) })
 ```
 
-####	Métodos:  
-	* start() retorno (null)  
+####	Métodos:
+```python  
+	start() retorno (None)  
+```
