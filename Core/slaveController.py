@@ -1,10 +1,17 @@
 from threading import Thread
-import RPi.GPIO as GPIO
 
 voltageMaps = {
     'HIGH': GPIO.HIGH,
     'LOW': GPIO.LOW
 }
+
+def moduleExists(moduleName):
+    try:
+        __import__(moduleName)
+    except ImportError:
+        return False
+    else:
+        return True    
 
 class SlaveController(Thread):
     def __init__(self):
@@ -14,8 +21,13 @@ class SlaveController(Thread):
 
     def assignPins(self, pins = []):
         self.pins = pins
-        for pin in pins:
-            GPIO.setup(pin, GPIO.IN)
+        if moduleExists('RPi.GPIO'):
+            for pin in pins:
+                RPi.GPIO.setup(pin, RPi.GPIO.IN)
 
     def setPin(self, pin, voltage):
-        GPIO.output(pin, voltageMaps[voltage])
+        if not pin in self.pins:
+            raise Exception('Pin {0} not set'.format(pin))
+
+        if moduleExists('RPi.GPIO'):
+            RPi.GPIO.output(pin, voltageMaps[voltage])
