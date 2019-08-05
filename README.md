@@ -22,8 +22,8 @@ def __init__(self, ...variables):
 <ControllerName>(SlaveController):  
 	def __init__(self, ...variables):  
 		SlaveController.__init__(self)
-
-	Métodos:    
+```
+####	Métodos:    
 	* assignPins(pins (list)) retorno (null)    
    	* setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (null)
 
@@ -34,5 +34,5 @@ def __init__(self, ...variables):
 <StateMachineName> = StateMachine(states (dict), variables (dict), initState(string), opts = { debug (bool), timer (int) })
 ```
 
-	Métodos:  
+####	Métodos:  
 	* start() retorno (null)  
