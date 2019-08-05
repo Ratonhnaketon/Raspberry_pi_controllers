@@ -8,7 +8,8 @@ Este projeto define isso por controlador mestre e controlador escravo. Precisa d
 
 * ### [MasterController](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/masterController.py)
 
-  Define o controlador mestre.  
+  Define o controlador mestre.<br>
+####	Declaração
 ```python
 <ControllerName>(MasterController):  
 def __init__(self, ...variables):  
@@ -17,7 +18,8 @@ def __init__(self, ...variables):
 
 * ### [SlaveController](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/slaveController.py)
 
-  Define o controlador escravo.  
+  Define o controlador escravo.<br/>
+####	Declaração  
 ```python
 <ControllerName>(SlaveController):  
 	def __init__(self, ...variables):  
