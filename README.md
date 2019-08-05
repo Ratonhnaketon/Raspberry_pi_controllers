@@ -46,7 +46,8 @@ start() return None
 
 * ### [State](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
 
-	Define os estados  
+	Define os estados<br/>
+####	Declaração  
 ```python
 <StateName> = State(name: str, func: def, nextStateConditions: dict({ nextState: str, conditions: dict }))
 ```
