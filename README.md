@@ -23,7 +23,7 @@ def __init__(self, ...variables):
 	def __init__(self, ...variables):  
 		SlaveController.__init__(self)
 ```
-
+	</br>
 	Métodos:    
 	* assignPins(pins (list)) retorno (null)    
    	* setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (null)
