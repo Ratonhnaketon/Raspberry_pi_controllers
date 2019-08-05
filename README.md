@@ -28,9 +28,9 @@ Este projeto define isso por controlador mestre e controlador escravo. Precisa d
 	  
 * ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
 
-	Define a máquina de estados
+	Define a máquina de estados  
 
 	<StateMachineName> = StateMachine(states (dict), variables (dict), initState(string), opts = { debug (bool), timer (int) })
 
 	Métodos:  
-	* start() retorno (null)
+	* start() retorno (null)  
