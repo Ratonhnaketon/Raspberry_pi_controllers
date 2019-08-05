@@ -28,18 +28,30 @@ def __init__(self, ...variables):
 
 ####	Métodos:   
 ```python 
-assignPins(pins (list)) retorno (None)    
-setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (None)
+assignPins(pins: list) return None    
+setPin(pin: int, voltage: ('HIGH' | 'LOW')) return None
 ```
 
 * ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
 
 	Define a máquina de estados  
 ```python
-<StateMachineName> = StateMachine(states (dict), variables (dict), initState(string), opts = { debug (bool), timer (int) })
+<StateMachineName> = StateMachine(states: dict, variables: dict, initState: str, args: dict({ debug: bool, timer: int }))
 ```
 
 ####	Métodos:
 ```python  
-start() retorno (None)  
+start() return None  
+```
+
+* ### [State](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
+
+	Define os estados  
+```python
+<StateName> = State(name: (str), func: (def), nextStateConditions: dict({ nextState: str, conditions: dict }))
+```
+
+####	Métodos:
+```python  
+start() return None  
 ```
