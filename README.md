@@ -10,16 +10,16 @@ Este projeto define isso por controlador mestre e controlador escravo. Precisa d
 
   Define o controlador mestre.
   Parâmetros: 
-    --
+    -
   
   Métodos:
-    --
+    -
 
 * ### [SlaveController](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/Core/slaveController.py)
 
   Define o controlador escravo.
   Parâmetros:
-    --
+    -
    Métodos:
    * assignPins
       Parâmetros: 
