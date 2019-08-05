@@ -48,7 +48,7 @@ start() return None
 
 	Define os estados  
 ```python
-<StateName> = State(name: (str), func: (def), nextStateConditions: dict({ nextState: str, conditions: dict }))
+<StateName> = State(name: str, func: def, nextStateConditions: dict({ nextState: str, conditions: dict }))
 ```
 
 ####	Métodos:
