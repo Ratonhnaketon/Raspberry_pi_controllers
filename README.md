@@ -26,8 +26,8 @@ def __init__(self, ...variables):
 
 ####	Métodos:   
 ```python 
-	assignPins(pins (list)) retorno (None)    
-   	setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (None)
+assignPins(pins (list)) retorno (None)    
+setPin(pin (int), voltage ('HIGH' | 'LOW')) retorno (None)
 ```
 
 * ### [StateMachine](https://github.com/Ratonhnaketon/Raspberry_pi_controllers/blob/master/StateMachine/controller.py)
@@ -39,5 +39,5 @@ def __init__(self, ...variables):
 
 ####	Métodos:
 ```python  
-	start() retorno (None)  
+start() retorno (None)  
 ```
